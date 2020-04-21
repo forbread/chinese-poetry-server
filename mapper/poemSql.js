@@ -11,7 +11,7 @@ var poems = {
         author:"select count(*) as total  from poems where author like ?",
         title:"select count(*) as total  from poems where title like ?",
         content:"select count(*) as total  from poems where content like ?",
-        all:"select  count(*) as total from poems  limit ?,?",
+        all:"select  count(*) as total from poems ",
         poemsNmae: "select count(distinct title) as total  from poems "
     } 
 };

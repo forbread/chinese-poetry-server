@@ -59,16 +59,16 @@ const poetControllers = {
     getPoetryList(req, res, next) {
         let param = getRequestParam(req)
         let paramSql = [(param.page - 1) * param.size, param.size]
-        let sqlCount = $sql.poem.count
-        let sqlStatement = $sql.poem.list
+        let sqlCount = $sql.poetry.listCount
+        let sqlStatement = $sql.poetry.list
         queryList(req, res, next, { sqlCount, paramSql, sqlStatement }, param)
     },
 
     getPoemList(req, res, next) {
         let param = getRequestParam(req)
         let paramSql = [(param.page - 1) * param.size, param.size]
-        let sqlCount = $sql.poetry.listCount
-        let sqlStatement = $sql.poetry.list
+        let sqlCount = $sql.poem.listCount
+        let sqlStatement = $sql.poem.list
         queryList(req, res, next, { sqlCount, paramSql, sqlStatement }, param)
 
 

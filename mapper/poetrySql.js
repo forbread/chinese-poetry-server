@@ -5,6 +5,7 @@ var poetrys = {
         author: "select   * from poetry where author like ? limit ?,?",
         title: "select   * from poetry where title like ? limit ?,?",
         content: "select  * from poetry where content like ? limit ?,?",
+        dynasty: "select  * from poetry where dynasty like ? limit ?,?",
         all: "select  * from poetry limit ?,?",
     },
     listCount: {
@@ -12,6 +13,7 @@ var poetrys = {
         author: "select count(*) as total  from poetry where author like ?",
         title: "select count(*) as total  from poetry where title like ?",
         content: "select count(*) as total  from poetry where content like ?",
+        dynasty: "select count(*) as total  from poetry where dynasty like ?",
         all: "select  count(*) as total  from poetry ",
     }
 };
