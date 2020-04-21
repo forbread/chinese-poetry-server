@@ -79,7 +79,8 @@ const poetControllers = {
         pool.getConnection(function (err, connection) {
             console.log($sql.poetry.id,param.author_id)
             connection.query($sql.poetry.id, param.author_id, (err, result) => {
-                jsonWrite(res, result);
+                console.log(result)
+                jsonWrite(res, result[0]);
                 connection.release();
             })
 
@@ -92,7 +93,7 @@ const poetControllers = {
         pool.getConnection(function (err, connection) {
             console.log($sql.poem.id,paramSql)
             connection.query($sql.poem.id,paramSql, (err, result) => {
-                jsonWrite(res, result);
+                jsonWrite(res, result[0]);
                 connection.release();
             })
 

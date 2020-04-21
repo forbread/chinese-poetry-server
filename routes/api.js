@@ -14,6 +14,7 @@ router.get('/ts/poetrys/author-id', poetryControllers.getListByAuthorId);
 router.get('/song/poems', poemControllers.getList);
 router.get('/song/poems/condition', poemControllers.getListByCondition);
 router.get('/song/poems/title', poemControllers.getPoemTitleList);
+router.get('/song/poems/author-id', poemControllers.getListByAuthorId);
 
 router.get('/shijing/list/condition', shijingControlls.getListByCondition);
 router.get('/shijing/list', shijingControlls.getList);

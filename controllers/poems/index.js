@@ -54,6 +54,13 @@ const poemControllers = {
         let sqlStatement = $sql.list.poemsNmae
         queryList(req, res, next, { sqlCount, paramSql, sqlStatement }, param)
     },
+    getListByAuthorId(req, res, next) {
+        let param = getRequestParam(req)
+        let paramSql = [param.author_id,(param.page - 1) * param.size, param.size]
+        let sqlCount = $sql.listCount.author_id
+        let sqlStatement = $sql.list.author_id
+        queryList(req, res, next, { sqlCount, paramSql, sqlStatement }, param)
+    },
 
 }
 
