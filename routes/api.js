@@ -5,6 +5,10 @@ const poemControllers = require('../controllers/poems')
 const shijingControlls = require('../controllers/shijing')
 const poemCollectionControllers = require('../controllers/poemCollections')
 const poetControllers = require('../controllers/poets')
+const idiomControllers = require('../controllers/dictionaries/idioms')
+const wordControllers = require('../controllers/dictionaries/word')
+const ciyuControllers = require('../controllers/dictionaries/ciyu')
+const xiehouyuControllers = require('../controllers/dictionaries/xiehouyu')
 
  
 router.get('/ts/poetrys', poetryControllers.getList);
@@ -32,6 +36,18 @@ router.get('/poetry/poet:id',poetControllers.getPoetryById)
 router.get('/poetry/poets/list',poetControllers.getPoetryList)
 router.get('/poem/poet:id',poetControllers.getPoemById)
 router.get('/poem/poets/list',poetControllers.getPoemList)
+
+router.get('/dictionaries/idioms/word',idiomControllers.getListByCondition)
+router.get('/dictionaries/idioms',idiomControllers.getList)
+
+router.get('/dictionaries/words/condition',wordControllers.getListByCondition)
+router.get('/dictionaries/words',wordControllers.getList)
+
+router.get('/dictionaries/ciyu/word',ciyuControllers.getListByCondition)
+router.get('/dictionaries/ciyu',ciyuControllers.getList)
+
+router.get('/dictionaries/xiehouyu/word',xiehouyuControllers.getListByCondition)
+router.get('/dictionaries/xiehouyu',xiehouyuControllers.getList)
 
 
 module.exports = router;
