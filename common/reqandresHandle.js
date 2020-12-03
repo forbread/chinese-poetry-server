@@ -37,6 +37,16 @@ var responseDataWrite = function (res, result) {
     }
 };
 
+/**
+ * 
+ * @param {*} req request对象
+ * @param {*} res response对象
+ * @param {*} next 
+ * @param {*} pool mysql连接池
+ * @param {*} queryParam paramSql查询参数 sqlCount查询条目SQL语句 sqlStatement查询数据SQL语句
+ * @param {*} param 分页参数
+ */
+
 let queryList = (req, res, next, pool, queryParam, param) => {
     pool.getConnection(function (err, connection) {
         console.log(queryParam.sqlCount, queryParam.paramSql)
